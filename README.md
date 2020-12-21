@@ -1,4 +1,4 @@
 # LinuxScanIP
-scan used ip in organization tool
+## scan your used ip addresses of your organization 
 
 * 1

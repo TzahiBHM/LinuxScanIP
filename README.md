@@ -9,3 +9,10 @@
 
 * Linux OS (tried in ubuntu 20.04)
 * Net-tools installed for "ifconfig" command
+
+## Code Explanation
+
+* Get Inet Address
+```python
+def get_inet_line():
+```

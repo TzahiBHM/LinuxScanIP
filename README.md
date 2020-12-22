@@ -20,6 +20,7 @@ def get_inet_line():
 ```
 
 ### Get Inet Address
+``sdsa``
 Use `get_inet_line()` function to search inet address between the word `inet` and `netmask`
 ```python
 def get_inet_address():

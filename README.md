@@ -12,9 +12,15 @@
 
 ## Code Explanation
 
-### Get Inet Address
-  Run "ifconfig" command to find the line that inlcudes inet and netmask address  
-  Function Definition:
+### Get Inet Line
+Run "ifconfig" command to find the line that inlcudes inet and netmask address  
+Function Definition:
 ```python
 def get_inet_line():
+```
+
+### Get Inet Address
+Use `get_inet_line()` function to search inet address between the word `inet` and `netmask`
+```python
+def get_inet_address():
 ```

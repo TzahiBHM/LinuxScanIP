@@ -8,4 +8,4 @@
 ## Required
 
 * Linux OS and (tried in ubuntu 20.04)
-* net-tools installed for "ifconfig" command
+* Net-tools installed for "ifconfig" command

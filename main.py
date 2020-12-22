@@ -1,8 +1,13 @@
 import os
-from colorama import Fore, Back, Style
+
+from colorama import Fore, Style
 
 
 def get_inet_line():
+    """
+    return inet line
+    search inet word and check if it doesn't belongs loopback interface
+    """
     base_info = os.popen('ifconfig').readlines()
     for i, value in enumerate(base_info):
         if "inet" in value and "inet6" not in value:
@@ -11,8 +16,9 @@ def get_inet_line():
     return False
 
 
-# work on linux command
 def get_inet_address():
+    # return inet address between 'inet' and 'netmask' words
+
     inet_line = get_inet_line()
     if inet_line:
         inet_index = inet_line.find('inet')
@@ -25,6 +31,7 @@ def get_inet_address():
 
 
 def get_netmask_address():
+    # return netmask address between 'netmask' and 'broadcast' words
     inet_line = get_inet_line()
     if inet_line:
         netmask_index = inet_line.find('netmask')
@@ -36,6 +43,7 @@ def get_netmask_address():
 
 
 def ping_address(ip):
+    # ping address and return 'True' if it used
     command = "ping {0} -c 1".format(ip)
     res = os.popen(command).readlines()
     if "ttl" in res[1]:
@@ -44,6 +52,10 @@ def ping_address(ip):
 
 
 def short_inet(inet, numToShort):
+    """
+    cut the irrelevant octets to build new 'inet' address
+    numToShort - how many octets to remove from original 'inet' address
+    """
     ip1 = None
     inet_copy = inet
     for t in range(numToShort):
@@ -53,7 +65,6 @@ def short_inet(inet, numToShort):
     return ip1
 
 
-# check netmask address
 # main program
 
 print(Fore.GREEN + "START PROGRAM")
@@ -101,7 +112,7 @@ elif netmask_address == "255.0.0.0":
 fs = open('log_scan_ip.txt', 'w')
 fs.write("ip addresses that used in the last scan: \n")
 for i in ips_used:
-    fs.write(i+'\n')
+    fs.write(i + '\n')
 fs.close()
 
 print(Fore.GREEN + "END PROGRAM")

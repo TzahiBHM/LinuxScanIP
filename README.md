@@ -21,7 +21,9 @@ def get_inet_line():
 
 ### Get Inet Address
 
-Use `python get_inet_line()` function to search inet address between the word `inet` and `netmask`
+Use `get_inet_line()` function to search inet address between the word `inet` and `netmask`  
+Function Definition:
 ```python
 def get_inet_address():
 ```
+return inet address (for example `10.0.0.1`)

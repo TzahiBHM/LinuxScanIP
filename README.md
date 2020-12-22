@@ -7,5 +7,5 @@
 
 ## Required
 
-* Linux OS and (tried in ubuntu 20.04)
+* Linux OS (tried in ubuntu 20.04)
 * Net-tools installed for "ifconfig" command

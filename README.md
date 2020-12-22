@@ -13,6 +13,8 @@
 ## Code Explanation
 
 * Get Inet Address
+  Run "ifconfig" command to find the line that inlcudes inet and netmask address
+  
 ```python
 def get_inet_line():
 ```

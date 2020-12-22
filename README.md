@@ -14,7 +14,7 @@
 
 * Get Inet Address <br>
   Run "ifconfig" command to find the line that inlcudes inet and netmask address
-  
+  Function Definition:
 ```python
 def get_inet_line():
 ```

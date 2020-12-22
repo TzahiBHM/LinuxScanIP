@@ -12,7 +12,7 @@
 
 ## Code Explanation
 
-* Get Inet Address <br>
+### Get Inet Address
   Run "ifconfig" command to find the line that inlcudes inet and netmask address
   Function Definition:
 ```python
